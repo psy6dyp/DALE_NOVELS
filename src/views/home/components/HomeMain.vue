@@ -6,6 +6,8 @@
         <header-module />
       </template>
     </novel-module>
+    <editor-pick :data="editorBest" />
+    <rank-books />
     <novel-module
       class="mt20"
       :titleImg="lNovelData.titleImg"
@@ -22,10 +24,12 @@
 </template>
 
 <script lang="ts" setup>
-import type { INovelData, ILink } from './type'
+import type { INovelData, ILink, IBook } from './type'
 import TopNotice from './HomeCnps/Main/TopNotice.vue'
 import NovelModule from './HomeCnps/Main/NovelModule.vue'
 import HeaderModule from './HomeCnps/Main/HeaderModule.vue'
+import EditorPick from './HomeCnps/Main/EditorPick.vue'
+import RankBooks from './HomeCnps/Main/RankBooks.vue'
 
 const headerTitle = 'http://faloo.com/images/manhua.png'
 const headerLinks: ILink[] = [
@@ -40,6 +44,40 @@ const headerLinks: ILink[] = [
   {
     link: '',
     name: '都市频道'
+  }
+]
+const editorBest: IBook[] = [
+  {
+    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
+    name: '大唐：从寇仲开始崛起诸天！'
+  },
+  {
+    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
+    name: '大唐：从寇仲开始崛起诸天！'
+  },
+  {
+    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
+    name: '大唐：从寇仲开始崛起诸天！'
+  },
+  {
+    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
+    name: '大唐：从寇仲开始崛起诸天！'
+  },
+  {
+    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
+    name: '大唐：从寇仲开始崛起诸天！'
+  },
+  {
+    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
+    name: '大唐：从寇仲开始崛起诸天！'
+  },
+  {
+    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
+    name: '大唐：从寇仲开始崛起诸天！'
+  },
+  {
+    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
+    name: '大唐：从寇仲开始崛起诸天！'
   }
 ]
 const gNovelData: INovelData = {

@@ -4,18 +4,17 @@
       <div class="link_detail">{{ item.name }}</div>
     </div>
     <div class="link_module" style="justify-content: flex-end; height: 20px; line-height: 20px">
-      <div class="link_more">更多 ></div>
+      <div class="link_more">{{ t('homeMain.more') }} ></div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { defineProps, PropType } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { ILink } from '../../type'
 
-interface ILink {
-  link: string
-  name: string
-}
+const { t } = useI18n()
 const data = defineProps({
   links: {
     type: Array as PropType<ILink[]>

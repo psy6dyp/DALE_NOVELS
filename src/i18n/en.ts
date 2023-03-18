@@ -8,6 +8,13 @@ export default {
     searchPlh: 'Please enter the name of the novel',
     boyNovel: "Boy's novel",
     moreNovel: 'More novel',
-    girlNovel: "Girl's novel"
+    girlNovel: "Girl's novel",
+    notice: 'notice',
+    more: 'more',
+    editorBest: "Editor's pick",
+    click: 'Click list',
+    money: 'Ticket list',
+    collection: 'Collection list',
+    friendsLinks: 'Friendly links'
   }
 }

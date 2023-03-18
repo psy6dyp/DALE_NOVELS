@@ -9,6 +9,6 @@
   background-color: #f3f5f5;
   max-width: 1300px;
   margin: 0 auto;
-  height: 2000px;
+  min-height: 500px;
 }
 </style>

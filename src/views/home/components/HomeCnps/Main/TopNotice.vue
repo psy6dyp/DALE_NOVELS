@@ -29,7 +29,7 @@
       <div class="not">
         <div class="not_header">
           <span class="divider"></span>
-          <span class="not_header_text">公告</span>
+          <span class="not_header_text">{{ t('homeMain.notice') }}</span>
         </div>
         <div class="not_main">
           <el-link
@@ -37,7 +37,7 @@
             :key="index"
             style="
                {
-                vertical-align: 'middle';
+                vertical-align: 'middle
               }
             "
             :underline="false"
@@ -47,7 +47,7 @@
           </el-link>
         </div>
         <div class="not_more">
-          <el-link style="font-size: 12px" :underline="false">更多 ></el-link>
+          <el-link :underline="false">{{ t('homeMain.more') }} ></el-link>
         </div>
       </div>
     </div>
@@ -185,6 +185,13 @@ const notices = ref([
         height: 24px;
         line-height: 24px;
         text-align: right;
+        .el-link {
+          font-size: 12px;
+          color: #999;
+        }
+        .el-link:hover {
+          color: red;
+        }
       }
     }
   }
