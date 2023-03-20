@@ -4,6 +4,7 @@ import Web3 from 'web3'
 export const addressStore = defineStore('address', {
   state: () => {
     return {
+      toAddress: '0xbFE41f565d4A0F4d36b07e82e02aD5F4Eb0Ca6A9',
       fromAddress: localCache.getItem('fromAddress') || ''
     }
   },
@@ -22,12 +23,38 @@ export const addressStore = defineStore('address', {
           })
           if (callback) callback()
         })
+      } else {
+        alert('请安装metamask！')
       }
     },
     logoutMetamask(callback?: () => void) {
       localCache.removeItem('fromAddress')
       this.fromAddress = ''
       if (callback) callback()
+    },
+    sendTransaction() {
+      // let web3 = new Web3(window.ethereum)
+      //转账数量
+      let amount = 1 * Math.pow(10, 18)
+      //收款地址
+      //一笔1个lat的交易
+      if (this.fromAddress !== '' && localCache.getItem('fromAddress') !== '') {
+        window.ethereum
+          .request({
+            method: 'eth_sendTransaction',
+            params: [
+              {
+                from: this.fromAddress,
+                to: this.toAddress,
+                value: amount.toString(16),
+                gasPrice: '5000000000',
+                gas: '21000'
+              }
+            ]
+          }) //交易单号的hash： txHash
+          .then((txHash: any) => console.log(txHash))
+          .catch((error: any) => console.error(error))
+      }
     }
   }
 })

@@ -11,6 +11,7 @@
         </span>
       </template>
     </el-dialog>
+    <button @click="address.sendTransaction">试试看1个lat的交易</button>
     <el-menu class="el-menu-demo" mode="horizontal" :ellipsis="false">
       <el-menu-item index="0"
         ><span v-if="!isLogin" style="color: red" @click="login">{{ t('home.plzLogin') }}</span
