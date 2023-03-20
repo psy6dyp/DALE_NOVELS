@@ -1,10 +1,16 @@
 export default {
+  common: {
+    confirm: 'Confirm',
+    cancel: 'Cancel'
+  },
   home: {
     plzLogin: 'Please, login',
     novels: 'novels',
     collections: 'collections',
     welcomeUser: 'Welcome, user',
-    language: 'language'
+    language: 'language',
+    exitLogin: 'exit',
+    confirmExit: 'Are you sure you want to log out of metamask?'
   },
   homeMain: {
     searchPlh: 'Please enter the name of the novel',

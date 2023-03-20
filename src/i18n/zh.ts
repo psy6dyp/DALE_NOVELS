@@ -1,11 +1,17 @@
 // zh.ts
 export default {
+  common: {
+    confirm: '确认',
+    cancel: '取消'
+  },
   home: {
     plzLogin: '您好，请登录',
     novels: '小说',
     collections: '收藏',
     welcomeUser: '欢迎您，用户',
-    language: '语言'
+    language: '语言',
+    exitLogin: '退出登录',
+    confirmExit: '确定要退出metamask登录吗？'
   },
   homeMain: {
     searchPlh: '请输入小说名字',

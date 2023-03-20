@@ -66,9 +66,17 @@ const notices = ref([
       height: 100%;
       overflow: hidden;
       border-radius: 3px;
+      transition: all 0.2s linear;
       img {
         height: 100%;
+        width: 100%;
+        cursor: pointer;
       }
+    }
+
+    .bg:hover {
+      box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+      transform: scale(1.01);
     }
     .not {
       width: 340px;

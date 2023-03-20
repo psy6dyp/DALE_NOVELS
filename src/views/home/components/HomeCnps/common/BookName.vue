@@ -18,6 +18,7 @@ const data = defineProps({
 
 <style lang="less" scoped>
 .book_name {
+  transition: all 0.1s linear;
   height: 170px;
   width: 103px;
   .face {
@@ -40,9 +41,14 @@ const data = defineProps({
     text-overflow: ellipsis;
     white-space: nowrap;
     cursor: pointer;
+    background-color: transparent;
   }
   .name:hover {
     color: #ff0000;
   }
+}
+.book_name:hover {
+  // box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+  transform: scale(1.1);
 }
 </style>

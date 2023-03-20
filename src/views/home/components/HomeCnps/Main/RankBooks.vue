@@ -97,6 +97,7 @@ const rank3 = [
   justify-content: space-between;
   align-items: center;
   .box-card {
+    transition: all 0.2s linear;
     width: 324px;
     height: 458px;
     .card-header {
@@ -110,14 +111,20 @@ const rank3 = [
     .text {
       font-size: 14px;
       cursor: pointer;
+      transition: all 0.2s linear;
     }
     .text:hover {
-      color: red;
+      color: rgb(237, 108, 9);
+      transform: scale(1.08) translateX(10px);
     }
 
     .item {
       margin-bottom: 15px;
     }
+  }
+  .box-card:hover {
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+    transform: scale(1.01);
   }
 }
 </style>

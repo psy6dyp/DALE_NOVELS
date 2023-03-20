@@ -1,9 +1,20 @@
 <template>
   <div class="home_header">
+    <el-dialog v-model="dialogVisible" :title="t('home.exitLogin')" width="30%">
+      <span>{{ t('home.confirmExit') }}</span>
+      <template #footer>
+        <span class="dialog-footer">
+          <el-button @click="dialogVisible = false">{{ t('common.cancel') }}</el-button>
+          <el-button type="primary" @click="logout">
+            {{ t('common.confirm') }}
+          </el-button>
+        </span>
+      </template>
+    </el-dialog>
     <el-menu class="el-menu-demo" mode="horizontal" :ellipsis="false">
       <el-menu-item index="0"
         ><span v-if="!isLogin" style="color: red" @click="login">{{ t('home.plzLogin') }}</span
-        ><span v-else style="color: #409eff">{{
+        ><span v-else style="color: #409eff" @click="dialogVisible = true">{{
           t('home.welcomeUser') + ' ' + address.fromAddress
         }}</span></el-menu-item
       >
@@ -64,10 +75,18 @@ const { t, locale } = useI18n()
 const { address, language } = useStore()
 
 const word = ref('')
+const dialogVisible = ref(false)
 const isLogin = ref(true)
 const login = async () => {
   await address.getFromAddress(() => {
     isLogin.value = true
+  })
+}
+const logout = () => {
+  address.logoutMetamask(() => {
+    window.location.reload
+    dialogVisible.value = false
+    isLogin.value = false
   })
 }
 onMounted(() => {
@@ -79,11 +98,11 @@ onMounted(() => {
 .home_header {
   width: 100%;
   .el-menu--horizontal {
-    border-bottom: none;
+    // border-bottom: none;
   }
   .el-menu-demo {
     padding: 0 78px;
-    background-color: transparent;
+    // background-color: transparent;
     .el-menu-item {
       font-size: 16px;
     }

@@ -33,13 +33,19 @@ const data = {
   justify-content: space-between;
   .header_face {
     height: 190px;
+    transition: all 0.2s linear;
     width: 136px;
     img {
       width: 100%;
       height: 100%;
     }
   }
+  .header_face:hover {
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+    transform: scale(1.02);
+  }
   .header_content {
+    cursor: pointer;
     height: 190px;
     width: 700px;
     display: flex;

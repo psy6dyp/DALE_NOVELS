@@ -23,6 +23,11 @@ export const addressStore = defineStore('address', {
           if (callback) callback()
         })
       }
+    },
+    logoutMetamask(callback?: () => void) {
+      localCache.removeItem('fromAddress')
+      this.fromAddress = ''
+      if (callback) callback()
     }
   }
 })
