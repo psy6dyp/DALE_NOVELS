@@ -2,7 +2,9 @@ export default {
   home: {
     plzLogin: 'Please, login',
     novels: 'novels',
-    collections: 'collections'
+    collections: 'collections',
+    welcomeUser: 'Welcome, user',
+    language: 'language'
   },
   homeMain: {
     searchPlh: 'Please enter the name of the novel',

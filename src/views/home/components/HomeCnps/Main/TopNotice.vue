@@ -1,27 +1,5 @@
 <template>
   <div class="top_notice">
-    <div class="top">
-      <div class="logo"><img src="@/assets/logo.png" alt="" /></div>
-      <div class="search">
-        <el-input
-          v-model="word"
-          class="w-50 m-2"
-          size="large"
-          :placeholder="t('homeMain.searchPlh')"
-        >
-          <template #append>
-            <el-button :icon="Search" />
-          </template>
-        </el-input>
-      </div>
-      <div class="links">
-        <el-link type="primary" :underline="false">{{ t('homeMain.boyNovel') }}</el-link>
-        <el-divider direction="vertical" />
-        <el-link type="warning" :underline="false">{{ t('homeMain.moreNovel') }}</el-link>
-        <el-divider direction="vertical" />
-        <el-link type="danger" :underline="false">{{ t('homeMain.girlNovel') }}</el-link>
-      </div>
-    </div>
     <div class="notice">
       <div class="bg">
         <img src="@/assets/images/home/bg.jpeg" alt="" />
@@ -56,11 +34,8 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { Search } from '@element-plus/icons-vue'
 import { useI18n } from 'vue-i18n'
-
 const { t } = useI18n()
-const word = ref('')
 const notices = ref([
   {
     title: '必须严惩！通州警方再次抓获1必须严惩！通州警方再次抓获1必须严惩！通州警方再次抓获1'
@@ -80,33 +55,6 @@ const notices = ref([
 <style lang="less" scoped>
 .top_notice {
   width: 100%;
-  .top {
-    height: 50px;
-    padding: 26px 78px;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .logo {
-      cursor: pointer;
-      img {
-        height: 50px;
-        width: auto;
-      }
-    }
-    .search {
-      width: 500px;
-    }
-    .links {
-      .el-divider--vertical {
-        border-left: 2px solid #ccc;
-      }
-      .el-link {
-        font-size: 19px;
-        font-weight: bold;
-      }
-    }
-  }
   .notice {
     margin: 40px auto;
     padding: 0 78px;

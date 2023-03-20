@@ -1,8 +1,8 @@
-const { defineConfig } = require('@vue/cli-service');
-const path = require('path');
-const AutoImport = require('unplugin-auto-import/webpack');
-const Components = require('unplugin-vue-components/webpack');
-const { ElementPlusResolver } = require('unplugin-vue-components/resolvers');
+const { defineConfig } = require('@vue/cli-service')
+const path = require('path')
+const AutoImport = require('unplugin-auto-import/webpack')
+const Components = require('unplugin-vue-components/webpack')
+const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -15,16 +15,16 @@ module.exports = defineConfig({
         store: path.resolve(__dirname, './src/store'),
         hooks: path.resolve(__dirname, './src/hooks'),
         utils: path.resolve(__dirname, './src/utils'),
-        i18n: path.resolve(__dirname, './src/i18n'),
-      },
+        i18n: path.resolve(__dirname, './src/i18n')
+      }
     },
     plugins: [
       AutoImport({
-        resolvers: [ElementPlusResolver()],
+        resolvers: [ElementPlusResolver()]
       }),
       Components({
-        resolvers: [ElementPlusResolver()],
-      }),
-    ],
-  },
-});
+        resolvers: [ElementPlusResolver()]
+      })
+    ]
+  }
+})

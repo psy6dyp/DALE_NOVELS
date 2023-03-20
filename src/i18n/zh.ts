@@ -3,7 +3,9 @@ export default {
   home: {
     plzLogin: '您好，请登录',
     novels: '小说',
-    collections: '收藏'
+    collections: '收藏',
+    welcomeUser: '欢迎您，用户',
+    language: '语言'
   },
   homeMain: {
     searchPlh: '请输入小说名字',
