@@ -3,7 +3,13 @@ export default {
   common: {
     confirm: '确认',
     cancel: '取消',
+    loginMessage: '登录成功！',
+    logoutMessage: '退出登录成功！',
     ad: '生成NFT和赋能GameFi的智能平台，快人一步，秒发NFT！'
+  },
+  transaction: {
+    success: '交易成功！',
+    faild: '交易失败'
   },
   home: {
     plzLogin: '您好，请登录',

@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import localCache from 'utils/localCache'
 import Web3 from 'web3'
+import 'element-plus/theme-chalk/el-message.css'
 export const addressStore = defineStore('address', {
   state: () => {
     return {
@@ -32,7 +33,7 @@ export const addressStore = defineStore('address', {
       this.fromAddress = ''
       if (callback) callback()
     },
-    sendTransaction() {
+    sendTransaction(callback?: () => void) {
       // let web3 = new Web3(window.ethereum)
       //转账数量
       let amount = 1 * Math.pow(10, 18)
@@ -52,8 +53,13 @@ export const addressStore = defineStore('address', {
               }
             ]
           }) //交易单号的hash： txHash
-          .then((txHash: any) => console.log(txHash))
-          .catch((error: any) => console.error(error))
+          .then((txHash: any) => {
+            if (callback) callback()
+            console.log(txHash)
+          })
+          .catch((error: any) => {
+            console.error(error)
+          })
       }
     }
   }

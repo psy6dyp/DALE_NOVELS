@@ -5,6 +5,17 @@ const Components = require('unplugin-vue-components/webpack')
 const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 
 module.exports = defineConfig({
+  // devServer: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'https://scanbak.platon.network',
+  //       secure: false,
+  //       pathRewrite: {
+  //         '^/api': ''
+  //       }
+  //     }
+  //   }
+  // },
   transpileDependencies: true,
   configureWebpack: {
     resolve: {

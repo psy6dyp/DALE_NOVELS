@@ -1,19 +1,5 @@
 <template>
-  <el-row justify="space-between" class="header_module" @click="router.push('/novel')">
-    <el-col :span="4">
-      <div class="face_img" :style="{ backgroundImage: 'url(' + data.headerImage + ')' }"></div>
-    </el-col>
-    <el-col :span="19" :offset="1" class="header_content">
-      <div class="title">{{ data.headerTitle }}</div>
-      <div class="tags">
-        <el-tag v-for="(item, index) in data.headerTags" :key="index" style="margin-right: 10px">{{
-          item
-        }}</el-tag>
-      </div>
-      <div class="content">{{ data.headerContent }}</div>
-    </el-col>
-  </el-row>
-  <!-- <div class="header_module" @click="router.push('/novel')">
+  <div class="header_module" @click="router.push('/novel')">
     <div class="header_face">
       <img :src="data.headerImage" alt="" />
     </div>
@@ -26,7 +12,7 @@
       </div>
       <div class="content">{{ data.headerContent }}</div>
     </div>
-  </div> -->
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -42,17 +28,21 @@ const data = {
 
 <style lang="less" scoped>
 .header_module {
-  height: 190px;
-  .face_img {
-    height: 190px;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    transition: all 0.2s linear;
-    background-repeat: no-repeat;
-  }
+  width: 100%;
+  height: 100%;
+  display: flex;
   // justify-content: space-between;
-  .face_img:hover {
+  justify-content: flex-start;
+  .header_face {
+    height: 190px;
+    transition: all 0.2s linear;
+    width: 136px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .header_face:hover {
     box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
     transform: scale(1.02);
   }

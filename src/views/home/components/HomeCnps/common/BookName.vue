@@ -24,12 +24,16 @@ const data = defineProps({
   .face {
     width: 100%;
     height: 145px;
+    transition: all 0.1s linear;
     cursor: pointer;
     img {
       width: 100%;
       height: 145px;
       border-radius: 3px;
     }
+  }
+  .face:hover {
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
   }
   .name {
     height: 25px;

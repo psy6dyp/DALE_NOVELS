@@ -2,7 +2,13 @@ export default {
   common: {
     confirm: 'Confirm',
     cancel: 'Cancel',
+    loginMessage: 'Login success!',
+    logoutMessage: 'Logout success!',
     ad: 'Smart Platform for Generating NFTs & Empowering GameFi'
+  },
+  transaction: {
+    success: 'Trade successfully!',
+    faild: 'Failure of transaction!'
   },
   home: {
     plzLogin: 'Please, login',

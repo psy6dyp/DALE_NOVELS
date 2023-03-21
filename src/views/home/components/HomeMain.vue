@@ -48,64 +48,65 @@ const headerLinks: ILink[] = [
 ]
 const editorBest: IBook[] = [
   {
-    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-    name: '大唐：从寇仲开始崛起诸天！'
+    image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+    name: '木叶忍者！'
   },
   {
-    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-    name: '大唐：从寇仲开始崛起诸天！'
+    image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+    name: '木叶忍者！'
   },
   {
-    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-    name: '大唐：从寇仲开始崛起诸天！'
+    image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+    name: '木叶忍者！'
   },
   {
-    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-    name: '大唐：从寇仲开始崛起诸天！'
+    image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+    name: '木叶忍者！'
   },
   {
-    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-    name: '大唐：从寇仲开始崛起诸天！'
+    image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+    name: '木叶忍者！'
   },
   {
-    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-    name: '大唐：从寇仲开始崛起诸天！'
+    image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+    name: '木叶忍者！'
   },
   {
-    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-    name: '大唐：从寇仲开始崛起诸天！'
+    image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+    name: '木叶忍者！'
   },
   {
-    image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-    name: '大唐：从寇仲开始崛起诸天！'
+    image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+    name: '木叶忍者！'
   }
 ]
 const gNovelData: INovelData = {
-  titleImg: 'http://faloo.com/images/nvshengxiaoshuo.png',
+  // titleImg: 'http://faloo.com/images/nvshengxiaoshuo.png',
+  titleImg: 'http://faloo.com/images/manhua.png',
   books: [
     {
-      image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-      name: '大唐：从寇仲开始崛起诸天！'
+      image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+      name: '木叶忍者！'
     },
     {
-      image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-      name: '大唐：从寇仲开始崛起诸天！'
+      image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+      name: '木叶忍者！'
     },
     {
-      image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-      name: '大唐：从寇仲开始崛起诸天！'
+      image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+      name: '木叶忍者！'
     },
     {
-      image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-      name: '大唐：从寇仲开始崛起诸天！'
+      image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+      name: '木叶忍者！'
     },
     {
-      image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-      name: '大唐：从寇仲开始崛起诸天！'
+      image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+      name: '木叶忍者！'
     },
     {
-      image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-      name: '大唐：从寇仲开始崛起诸天！'
+      image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+      name: '木叶忍者！'
     }
   ],
   links: [
@@ -124,31 +125,32 @@ const gNovelData: INovelData = {
   ]
 }
 const lNovelData: INovelData = {
-  titleImg: 'http://faloo.com/images/nanshengxiaoshuo.png',
+  // titleImg: 'http://faloo.com/images/nanshengxiaoshuo.png',
+  titleImg: 'http://faloo.com/images/manhua.png',
   books: [
     {
-      image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-      name: '大唐：从寇仲开始崛起诸天！'
+      image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+      name: '木叶忍者！'
     },
     {
-      image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-      name: '大唐：从寇仲开始崛起诸天！'
+      image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+      name: '木叶忍者！'
     },
     {
-      image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-      name: '大唐：从寇仲开始崛起诸天！'
+      image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+      name: '木叶忍者！'
     },
     {
-      image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-      name: '大唐：从寇仲开始崛起诸天！'
+      image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+      name: '木叶忍者！'
     },
     {
-      image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-      name: '大唐：从寇仲开始崛起诸天！'
+      image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+      name: '木叶忍者！'
     },
     {
-      image: 'http://img4ts.faloo.com/Listen/166x235/0/0/000000752.jpg',
-      name: '大唐：从寇仲开始崛起诸天！'
+      image: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
+      name: '木叶忍者！'
     }
   ],
   links: [

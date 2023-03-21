@@ -11,7 +11,15 @@
         </span>
       </template>
     </el-dialog>
-    <!-- <button @click="address.sendTransaction">试试看1个lat的交易</button> -->
+    <button
+      @click="
+        address.sendTransaction(() => {
+          ElMessage.success(t('transaction.success'))
+        })
+      "
+    >
+      试试看1个lat的交易
+    </button>
     <el-menu class="el-menu-demo" mode="horizontal" :ellipsis="false">
       <el-menu-item index="0"
         ><span v-if="!isLogin" style="color: red" @click="login">{{ t('home.plzLogin') }}</span
@@ -43,7 +51,7 @@
       </el-sub-menu>
     </el-menu>
     <div class="top">
-      <div class="logo"><img src="@/assets/logo.png" alt="" /></div>
+      <div class="logo" @click="router.push('/')"><img src="@/assets/logo.png" alt="" /></div>
       <div class="search">
         <el-input
           v-model="word"
@@ -68,10 +76,13 @@
 </template>
 
 <script lang="ts" setup>
+import { ElMessage } from 'element-plus'
+import 'element-plus/theme-chalk/el-message.css'
 import { ref, onMounted } from 'vue'
 import { Search } from '@element-plus/icons-vue'
-import { useI18n } from 'vue-i18n'
+import router from '@/router'
 import { useStore } from 'store/homeStore'
+import { useI18n } from 'vue-i18n'
 const { t, locale } = useI18n()
 const { address, language } = useStore()
 
@@ -82,12 +93,14 @@ const login = async () => {
   await address.getFromAddress(() => {
     isLogin.value = true
   })
+  ElMessage.success(t('common.loginMessage'))
 }
 const logout = () => {
   address.logoutMetamask(() => {
     window.location.reload
     dialogVisible.value = false
     isLogin.value = false
+    ElMessage.success(t('common.logoutMessage'))
   })
 }
 onMounted(() => {

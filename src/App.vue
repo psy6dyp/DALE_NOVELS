@@ -15,6 +15,7 @@
 <script lang="ts" setup>
 import Header from 'components/Header.vue'
 import Ad from 'components/Ad.vue'
+import axios from 'axios'
 // function getClientHeight() {
 //   var clientHeight = 0
 //   if (document.body.clientHeight && document.documentElement.clientHeight) {
