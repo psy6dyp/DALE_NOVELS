@@ -11,7 +11,7 @@
         </span>
       </template>
     </el-dialog>
-    <button @click="address.sendTransaction">试试看1个lat的交易</button>
+    <!-- <button @click="address.sendTransaction">试试看1个lat的交易</button> -->
     <el-menu class="el-menu-demo" mode="horizontal" :ellipsis="false">
       <el-menu-item index="0"
         ><span v-if="!isLogin" style="color: red" @click="login">{{ t('home.plzLogin') }}</span
@@ -21,7 +21,7 @@
       >
       <div class="flex-grow" />
       <el-menu-item index="1">{{ t('home.novels') }}</el-menu-item>
-      <el-menu-item index="2">{{ t('home.collections') }}</el-menu-item>
+      <!-- <el-menu-item index="2">{{ t('home.collections') }}</el-menu-item> -->
       <el-sub-menu index="3">
         <template #title>{{ t('home.language') }}</template>
         <el-menu-item

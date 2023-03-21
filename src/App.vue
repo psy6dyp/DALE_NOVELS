@@ -1,13 +1,52 @@
 <template>
   <div id="app">
     <Header />
+    <Ad />
+    <Ad :isRight="false" />
     <!-- <button @click="add">Connect Wallet</button> -->
     <!-- <div ref="qrcodeRef"></div> -->
-    <router-view></router-view>
+    <el-row class="body" justify="center">
+      <el-col :span="18">
+        <router-view></router-view>
+      </el-col>
+    </el-row>
   </div>
 </template>
 <script lang="ts" setup>
 import Header from 'components/Header.vue'
+import Ad from 'components/Ad.vue'
+// function getClientHeight() {
+//   var clientHeight = 0
+//   if (document.body.clientHeight && document.documentElement.clientHeight) {
+//     clientHeight =
+//       document.body.clientHeight < document.documentElement.clientHeight
+//         ? document.body.clientHeight
+//         : document.documentElement.clientHeight
+//   } else {
+//     clientHeight =
+//       document.body.clientHeight > document.documentElement.clientHeight
+//         ? document.body.clientHeight
+//         : document.documentElement.clientHeight
+//   }
+//   return clientHeight
+// }
+// function getClientWidth() {
+//   var clientWidth = 0
+//   if (document.body.clientWidth && document.documentElement.clientWidth) {
+//     clientWidth =
+//       document.body.clientWidth < document.documentElement.clientWidth
+//         ? document.body.clientWidth
+//         : document.documentElement.clientWidth
+//   } else {
+//     clientWidth =
+//       document.body.clientWidth > document.documentElement.clientWidth
+//         ? document.body.clientWidth
+//         : document.documentElement.clientWidth
+//   }
+//   return clientWidth
+// }
+// console.log(getClientHeight()) // 948
+// console.log(getClientWidth()) // 1707
 // import WalletConnect from '@walletconnect/client'
 // import QRCodeModal from '@walletconnect/qrcode-modal'
 // const qrcodeRef = ref<HTMLElement | null>(null)
@@ -63,8 +102,10 @@ import Header from 'components/Header.vue'
 <style lang="less" scoped>
 #app {
   /* background-color: #f3f5f5; */
-  max-width: 1300px;
-  margin: 0 auto;
+  // max-width: 1300px;
+  width: 100%;
   min-height: 500px;
+  .body {
+  }
 }
 </style>

@@ -2,7 +2,8 @@
 export default {
   common: {
     confirm: '确认',
-    cancel: '取消'
+    cancel: '取消',
+    ad: '生成NFT和赋能GameFi的智能平台，快人一步，秒发NFT！'
   },
   home: {
     plzLogin: '您好，请登录',

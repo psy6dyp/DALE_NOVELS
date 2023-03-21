@@ -1,7 +1,8 @@
 export default {
   common: {
     confirm: 'Confirm',
-    cancel: 'Cancel'
+    cancel: 'Cancel',
+    ad: 'Smart Platform for Generating NFTs & Empowering GameFi'
   },
   home: {
     plzLogin: 'Please, login',
