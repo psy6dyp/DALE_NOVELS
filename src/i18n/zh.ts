@@ -5,14 +5,18 @@ export default {
     cancel: '取消',
     loginMessage: '登录成功！',
     logoutMessage: '退出登录成功！',
-    ad: '生成NFT和赋能GameFi的智能平台，快人一步，秒发NFT！'
+    ad1: '生成NFT和赋能GameFi的智能平台，快人一步，秒发NFT！',
+    ad2: '全数字化公共基础设施!',
+    unlock: '点击解锁小说内容！',
+    missConnect: '断开连接！',
+    changeConnect: '切换用户，请重新登录！'
   },
   transaction: {
     success: '交易成功！',
     faild: '交易失败'
   },
   home: {
-    plzLogin: '您好，请登录',
+    plzLogin: '您好，请登录！',
     novels: '小说',
     collections: '收藏',
     welcomeUser: '欢迎您，用户',

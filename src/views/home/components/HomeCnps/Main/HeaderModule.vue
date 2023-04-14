@@ -13,27 +13,13 @@
       <div class="content">{{ data.headerContent }}</div>
     </el-col>
   </el-row>
-  <!-- <div class="header_module" @click="router.push('/novel')">
-    <div class="header_face">
-      <img :src="data.headerImage" alt="" />
-    </div>
-    <div class="header_content">
-      <div class="title">{{ data.headerTitle }}</div>
-      <div class="tags">
-        <el-tag v-for="(item, index) in data.headerTags" :key="index" style="margin-right: 10px">{{
-          item
-        }}</el-tag>
-      </div>
-      <div class="content">{{ data.headerContent }}</div>
-    </div>
-  </div> -->
 </template>
 
 <script lang="ts" setup>
 import router from '@/router'
 const data = {
   headerImage: 'https://img.zcool.cn/community/0106505e85458fa80120a895de0087.jpg@2o.jpg',
-  headerTitle: '杨老板卧底摸鱼群，被我气疯了',
+  headerTitle: '此处免费小说测试',
   headerTags: ['独家', '连载'],
   headerContent:
     '当我们开始在感情方面投资自己时，我们不可避免地面临各种挑战。但是，尽管这可能是艰难的旅程，但在我们的成长和发展中，情感投资是一个至关重要的方面。'

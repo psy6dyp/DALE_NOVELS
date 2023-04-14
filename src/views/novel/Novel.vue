@@ -28,14 +28,17 @@
   padding: 0 78px;
   box-sizing: border-box;
   header {
-    background-color: #04aa6d;
+    // background-color: #04aa6d;
+    background-color: #fff;
+    color: #000;
     padding: 20px;
+    border-bottom: 1px solid #999;
     h1 {
       margin: 0;
       font-size: 36px;
-      color: white;
+      // color: white;
       text-align: center;
-      text-shadow: 2px 2px #222222;
+      // text-shadow: 2px 2px #222222;
     }
   }
   .container {

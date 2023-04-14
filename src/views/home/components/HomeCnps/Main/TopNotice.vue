@@ -1,11 +1,11 @@
 <template>
   <el-row class="top">
-    <el-col :span="16" class="bg" @click="router.push('/novelEth')"> </el-col>
-    <el-col :span="6" :offset="2">
+    <el-col :span="16" class="bg" @click="router.push('/novelEth/1')">点击收费测试</el-col>
+    <el-col :span="6" :offset="2" @click="router.push('/novelEth/2')">
       <div class="not">
         <div class="not_header">
           <span class="divider"></span>
-          <span class="not_header_text">{{ t('homeMain.notice') }}</span>
+          <span class="not_header_text">{{ t('homeMain.notice') }} 点击收费测试</span>
         </div>
         <div class="not_main">
           <el-link
@@ -58,6 +58,9 @@ const notices = ref([
 }
 .bg {
   height: 260px;
+  font-size: 50px;
+  color: red;
+  text-align: center;
   overflow: hidden;
   border-radius: 3px;
   transition: all 0.2s linear;

@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
@@ -18,12 +18,13 @@ const routes: RouteRecordRaw[] = [
   },
   {
     name: 'novelEth',
-    path: '/novelEth',
+    path: '/novelEth/:id',
     component: () => import('views/novel/NovelEth.vue')
   }
 ]
 const router = createRouter({
   routes,
-  history: createWebHistory()
+  // history: createWebHistory()
+  history: createWebHashHistory()
 })
 export default router

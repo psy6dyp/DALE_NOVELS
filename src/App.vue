@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Ad />
+    <Ad :imgType="1" />
     <Ad :isRight="false" />
     <!-- <button @click="add">Connect Wallet</button> -->
     <!-- <div ref="qrcodeRef"></div> -->
@@ -14,8 +14,41 @@
 </template>
 <script lang="ts" setup>
 import Header from 'components/Header.vue'
+import { ElMessage } from 'element-plus'
+import { onMounted } from 'vue'
 import Ad from 'components/Ad.vue'
-import axios from 'axios'
+import { useStore } from '@/store/homeStore'
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n()
+const { address, language } = useStore()
+
+onMounted(() => {
+  if (window.ethereum) {
+    window.ethereum.on('accountsChanged', (account: any) => {
+      console.log('accountsChanged', account)
+      address.clearAll(() => {
+        // setTimeout(() => {
+        //   window.location.reload()
+        // }, 1000)
+      })
+      // if (account.length === 0) {
+      //   ElMessage.error(t('common.missConnect'))
+      //   address.clearAll(() => {
+      //     // setTimeout(() => {
+      //     //   window.location.reload()
+      //     // }, 1000)
+      //   })
+      // } else if(account[0] !== ) {
+      //   ElMessage.error(t('common.changeConnect'))
+      //   address.clearAll(() => {
+      //     // setTimeout(() => {
+      //     //   window.location.reload()
+      //     // }, 1000)
+      //   })
+      // }
+    })
+  }
+})
 // function getClientHeight() {
 //   var clientHeight = 0
 //   if (document.body.clientHeight && document.documentElement.clientHeight) {

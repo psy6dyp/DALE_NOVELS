@@ -11,20 +11,11 @@
         </span>
       </template>
     </el-dialog>
-    <button
-      @click="
-        address.sendTransaction(() => {
-          ElMessage.success(t('transaction.success'))
-        })
-      "
-    >
-      试试看1个lat的交易
-    </button>
     <el-menu class="el-menu-demo" mode="horizontal" :ellipsis="false">
       <el-menu-item index="0"
         ><span v-if="!isLogin" style="color: red" @click="login">{{ t('home.plzLogin') }}</span
         ><span v-else style="color: #409eff" @click="dialogVisible = true">{{
-          t('home.welcomeUser') + ' ' + address.fromAddress
+          t('home.welcomeUser') + ' ' + userName
         }}</span></el-menu-item
       >
       <div class="flex-grow" />
@@ -76,9 +67,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'element-plus'
-import 'element-plus/theme-chalk/el-message.css'
-import { ref, onMounted } from 'vue'
+import { ElMessage, ElLoading } from 'element-plus'
+import { ref, onMounted, computed } from 'vue'
 import { Search } from '@element-plus/icons-vue'
 import router from '@/router'
 import { useStore } from 'store/homeStore'
@@ -91,10 +81,20 @@ const dialogVisible = ref(false)
 const isLogin = ref(true)
 const login = async () => {
   await address.getFromAddress(() => {
+    ElMessage.success(t('common.loginMessage'))
     isLogin.value = true
   })
-  ElMessage.success(t('common.loginMessage'))
 }
+const userName = computed(() => {
+  if (address.fromAddress.length > 0) {
+    const newName = address.fromAddress.substr(0, 5).padEnd(9, '*') + address.fromAddress.slice(38)
+    return newName
+  } else {
+    // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+    isLogin.value = false
+    return ''
+  }
+})
 const logout = () => {
   address.logoutMetamask(() => {
     window.location.reload
